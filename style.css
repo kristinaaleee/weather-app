@@ -1,0 +1,96 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+} 
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+#root, #__next {
+    isolation: isolate;
+}
+
+/* color/font */
+:root{
+    --lightgrey: #F6F6F8;
+}
+#container{
+    display: flex;
+    flex-direction: row ;
+    height: 100vh;
+}
+
+/* left panel */
+#left-panel{
+    background-color: blue;
+    width: 30vw;
+}
+#search-header{
+    background-color: lightblue;
+}
+
+/* right panel */
+#button-header{
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#right-panel{
+    background-color: red;
+    width: 70vw;
+}
+#days-container{
+    border: solid 3px black;
+    margin: 20px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.day-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100px;
+    align-items: center;
+}
+.day-wrapper > div{
+    display: flex;
+    flex-direction: row;
+}
+#highlight-container{
+    border: solid 3px purple;
+
+    /* possibly grid if I add more highlights */
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.highlight{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 200px;
+}

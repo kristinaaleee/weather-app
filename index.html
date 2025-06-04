@@ -7,9 +7,43 @@
     <title>Weather App</title>
 </head>
 <body>
-    <input type="text">
-    <button id="submit">Submit</button>
-    <div id = 'container'></div>
+    <div id="container">
+        <div id="left-panel">
+            <div id="search-header">
+                    <input type="text">
+                    <button id="submit">Submit</button>   
+            </div>
+            <div id="left-container">
+                <!-- location -->
+                <!-- icon -->
+                <!-- temp -->
+                <!-- feels like -->
+                <!-- descrip -->
+            </div>
+        </div>
+        <div id="right-panel">
+            <div id="button-header">
+                <button id="refresh">Refresh</button>
+                <div>
+                    <button id="cel">C</button>
+                    <button id="fah">F</button>
+                </div>
+            </div>
+            <div id="right-container">
+                <div id="days-container">
+                    <!-- future forcast container -->
+                </div>
+                <div id="highlight-container">
+                    <div id="rain-wrapper" class="highlight">
+                    </div>
+                    <div id="sun-wrapper" class="highlight">
+                    </div>
+                    <div id="uv-wrapper" class="highlight">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
