@@ -258,7 +258,7 @@ function displayWeather(location) {
 
     city.setCustomValidity('');
     city.classList.remove('error');
-    
+    cityHolder = city.value;
     })
     .catch(() => {
         city.setCustomValidity('Please enter valid location.')
