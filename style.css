@@ -31,66 +31,216 @@ h1, h2, h3, h4, h5, h6 {
 /* color/font */
 :root{
     --lightgrey: #F6F6F8;
+    --background: #AAAAAA;
+    --searchbar: #E3E3E3;
+    --rightpanel: #DAE2ED;
+    --darkgrey: #4B4B4B;
+}
+html{
+    height: 100%;
+}
+body{
+    background-color: var(--background);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+.medium{
+    font-weight: 500;
+}
+.bold{
+    font-weight: 700;
 }
 #container{
     display: flex;
     flex-direction: row ;
-    height: 100vh;
+    width: 1260px;
+    height: 780px;
+    border-radius: 50px;
 }
 
 /* left panel */
 #left-panel{
-    background-color: blue;
+    background-color: white;
+    padding: 45px;
     width: 30vw;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
 }
+/* search styling */
 #search-header{
-    background-color: lightblue;
+    position: relative;
+    border-radius: 25px;
+}
+input{
+    background-color: var(--searchbar);
+    height: 35px;
+    border: none;
+    border-radius: inherit; 
+    padding-left: 45px;
+    width: 100%;
+}
+.error{
+    outline: solid 2px rgba(255, 0, 0, 0.767);
+}
+#submit{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    cursor: pointer;
+}
+/* info-display */
+#left-container {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 45px;
+    
+}
+#location{
+    text-align: center;
+    font-size: 25px;
+}
+#left-container > img{
+    align-self: center;
+    height: 215px;
+}
+#temp{
+    font-size: 70px;
+}
+#descrip{
+    color: var(--darkgrey);
+    padding-bottom: 25px;
+    border-bottom: solid 1px #4b4b4b8a;
+    margin-bottom: 25px;
+}
+.extra-info{
+    color: var(--darkgrey);
+    padding-bottom: 10px;
 }
 
 /* right panel */
 #button-header{
-    background-color: lightcoral;
+    margin-bottom: 2em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+#right-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+#refresh{
+    height: 35px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.unit{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.unit:hover, #refresh:hover{
+    border: solid 2px var(--darkgrey);
+}
+.active{
+    background-color: var(--darkgrey);
+    color: white;
+}
+.active:hover{
+    border: solid 2px white;
+}
 #right-panel{
-    background-color: red;
+    padding: 45px;
+    background-color: var(--rightpanel);
     width: 70vw;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
 }
 #days-container{
-    border: solid 3px black;
-    margin: 20px;
-    padding: 20px;
-
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 25px;
 }
 .day-wrapper{
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 100px;
+    height: 140px;
+    width: 110px;
+    justify-content: center;
     align-items: center;
+    border-radius: 25px;
+}
+.day-wrapper > img {
+    height: 50px;
 }
 .day-wrapper > div{
     display: flex;
     flex-direction: row;
+    gap: 5px;
+    margin-top: 8px;
+}
+.day-wrapper > h4{
+    color: var(--darkgrey);
+}
+.day-wrapper > div > div {
+    color: var(--darkgrey);
 }
 #highlight-container{
-    border: solid 3px purple;
-
-    /* possibly grid if I add more highlights */
-    padding: 20px;
-    margin: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .highlight{
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: white;
-    width: 200px;
+    padding: 30px;
+    height: 250px;
+    width: 250px;
+    border-radius: 25px;
+}
+.highlight > p {
+    color: var(--darkgrey);
+    padding-bottom: 30px;
+}
+.highlight > div:not(.sun){
+    font-size: 60px;
+}
+#sun-wrapper{
+    align-items: start;
+}
+#sun-wrapper > p{
+    align-self: center;
+}
+.sun{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+}
+.sun > img {
+    height: inherit;
 }
